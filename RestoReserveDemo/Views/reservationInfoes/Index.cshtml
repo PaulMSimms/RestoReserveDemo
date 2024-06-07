@@ -1,0 +1,51 @@
+﻿@model IEnumerable<RestoReserveDemo.Models.reservationInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_reservation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.number_of_guests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time_of_reservation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customerInfo.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_reservation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.number_of_guests)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_of_reservation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customerInfo.email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.reservation_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.reservation_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.reservation_id })
+        </td>
+    </tr>
+}
+
+</table>

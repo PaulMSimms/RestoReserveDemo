@@ -1,0 +1,50 @@
+﻿@model RestoReserveDemo.Models.reservationInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>reservationInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_reservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_reservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.number_of_guests)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number_of_guests)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time_of_reservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_of_reservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerInfo.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerInfo.email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.reservation_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
