@@ -7,6 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 //tnginamo isapanaga
+//BETA
 namespace RestoReserveDemo.Models
 {
     using System;
